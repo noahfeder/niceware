@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="niceware.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <style>
+  .main {
+    width: 200px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  .inputDiv, #input {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: #eee;
+    text-shadow: 1px 1px 1px #666;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.5em;
+  }
+  .inputDiv, .outputDiv {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .text {
+    flex: 1 0 100%;
+  }
+  #input, #output {
+    flex: 1 0 80%;
+  }
+  #button {
+    flex: 1 0 20%;
+  }
+  #output {
+    height: 3.8em;
+    display: block;
+    padding: 0;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    resize: none;
+  }
+  </style>
+
+  <div class="main">
+    <div class="inputDiv">
+      <div class="text">Password Length: <span id="length"></span></div>
+      <input id="input" type="range" min="2" max="16" step="2" default="8">
+      <button id="button">GO</button>
+    </div>
+    <div class="outputDiv">
+      <textarea id="output"></textarea>
+      <button id="copy1">Copy rANdoMcAsE</button>
+      <button id="copy2">Copy UPPERCASE</button>
+      <button id="copy3">Copy CamelCase</button>
+    </div>
+  </div>
+</body>
+</html>
